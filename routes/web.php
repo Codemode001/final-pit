@@ -8,9 +8,9 @@ Route::get('/', function () {
 
 Route::post('/submit-form', 'App\Http\Controllers\FormController@submit')->name('submit.form');
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+Route::get('/success', function () {
+    return view('success');
+})->name('success');
 
 Route::get('/registration', function () {
     return view('registration');

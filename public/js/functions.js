@@ -66,3 +66,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+//scroll to top
+
+function scrollToTop() {
+    if ("scrollBehavior" in document.documentElement.style) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+        scrollToTopFallback();
+    }
+}
+
+function scrollToTopFallback() {
+    const currentScroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+    if (currentScroll > 0) {
+        window.requestAnimationFrame(scrollToTopFallback);
+        window.scrollTo(0, currentScroll - currentScroll / 8);
+    }
+}

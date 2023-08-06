@@ -70,6 +70,12 @@
       .icons-container {
         background-color: gray
       }
+
+      .relative {
+      position: relative;
+    }
+
+  
     }
   </style>
 
@@ -532,10 +538,7 @@
                           <label for="email" class="form-label">Email</label>
                           <input type="email" class="form-control" id="email" name="email" required />
                       </div>
-                      <div class="mb-3">
-                          <label for="mobileNumber" class="form-label">Mobile Number</label>
-                          <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" pattern="[0-9]+" required />
-                      </div>
+                    
                       <div class="mb-3">
                    <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required />
@@ -569,7 +572,11 @@
       <div class="container">
         <div class="row pt-5 pb-5">
           <p class="text-white text-center">Copyright © 2023</p>
+          <div style="background-color: gray; position: relative; " onclick="scrollToTop()">
+      <div  style="display: flex; align-items: center; justify-content: center; font-size: 3rem; position: absolute; bottom: -2rem; left: 85rem; width: 6rem; height: 6rem; border-radius: 50%; border: 2px solid #2596be; color: #2596be; cursor: pointer">&#8593;</div>
+    </div>
         </div>
+       
       </div>
     </section>
 
@@ -589,5 +596,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    
   </body>
 </html>
