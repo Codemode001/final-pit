@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
 
         const password = document.getElementById("password").value;
         const confirmPassword =

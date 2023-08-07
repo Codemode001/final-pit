@@ -20,18 +20,10 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            // Authentication passed, redirect to the login success route
             return redirect()->route('loginSuccess');
         } else {
-            // Authentication failed, redirect back with errors
             return redirect()->back()->withInput()->withErrors(['email' => 'Invalid credentials']);
         }
-    }
-
-    public function handleLoginSuccess(Request $request)
-    {
-        // This function is not needed because we handle login success in the 'login' function.
-        // You can remove this function.
     }
 
     public function logout()
