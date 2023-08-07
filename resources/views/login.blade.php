@@ -67,15 +67,20 @@
 <body>
   <div class="container">
     <div class="header">LOGIN</div>
-    <form onsubmit="loginAccount(event)">
-      <div class="mb-3 w-full">
-        <input type="email" placeholder="Email" name="email" />
-      </div>
-      <div class="mb-3 w-full">
-        <input type="text" placeholder="Password" name="Password" />
-      </div>
-      <button id="button-addon2" type="submit">Login</button>
-    </form>
+    <form action="{{ route('login') }}" method="POST">
+    @csrf
+    <div class="mb-3 w-full">
+        <input type="email" placeholder="Email" name="email" id="email" required/>
+    </div>
+    <div class="mb-3 w-full">
+        <input type="password" placeholder="Password" name="password" id="password" required/>
+    </div>
+    <button id="button-addon2" type="submit">Login</button>
+    @error('email')
+        <span class="text-red-500" style="color: red; font-size: 1rem; letter-spacing: 2px">{{ $message }}</span>
+    @enderror
+</form> 
+
     <div class="cursor-pointer">forgot password</div>
   </div>
 

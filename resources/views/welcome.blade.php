@@ -515,55 +515,55 @@
     
     <!--REGISTER-->
    
-      <form id="registrationForm"  method="post" action="{{ route('submit.form') }}">
-      @csrf <!-- Add the CSRF token -->
-      <div class="modal fade" id="Connect" tabindex="-1" aria-labelledby="ConnectModalLabel" aria-hidden="true">
-          <div class="modal-dialog" >
-              <div class="modal-content" >
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="ConnectModalLabel">Registration Form</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="registrationForm"  method="post" action="{{ route('submit.form') }}">
+        @csrf <!-- Add the CSRF token -->
+        <div class="modal fade" id="Connect" tabindex="-1" aria-labelledby="ConnectModalLabel" aria-hidden="true">
+            <div class="modal-dialog" >
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ConnectModalLabel">Registration Form</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="mb-3">Fill out this form to join: <span style="color: transparent;">ERIC JOHN GWAPO</span></h5>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required />
+                        </div>
+                      
+                        <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" required />
+                    <small class="form-text text-muted"></small>
+                    </div>
+                        <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+                    </div>
+                    <div style="display: flex; justify-content: center">
+                    <div type="button" id="togglePassword">Show Password</div>
                   </div>
-                  <div class="modal-body">
-                      <h5 class="mb-3">Fill out this form to join: <span style="color: transparent;">ERIC JOHN GWAPO</span></h5>
-                      <div class="mb-3">
-                          <label for="firstName" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="firstName" name="firstName" required />
-                      </div>
-                      <div class="mb-3">
-                          <label for="lastName" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="lastName" name="lastName" required />
-                      </div>
-                      <div class="mb-3">
-                          <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="email" name="email" required />
-                      </div>
-                    
-                      <div class="mb-3">
-                   <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required />
-                  <small class="form-text text-muted"></small>
+                    </div>
+                    <div style="display: flex; justify-content: center; padding: 0 1rem 0 1rem; text-align: center; margin-bottom: 2rem">
+                    <div id="passwordValidationResult"></div>
                   </div>
-                      <div class="mb-3">
-                  <label for="confirmPassword" class="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
-                  </div>
-                  <div style="display: flex; justify-content: center">
-                  <div type="button" id="togglePassword">Show Password</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      
+                        <button type="submit" id="submitBtn" name="submitBtn" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
-                  </div>
-                  <div style="display: flex; justify-content: center; padding: 0 1rem 0 1rem; text-align: center; margin-bottom: 2rem">
-                  <div id="passwordValidationResult"></div>
-                </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                     
-                      <button type="submit" id="submitBtn" name="submitBtn" class="btn btn-primary">Submit</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </form>
+            </div>
+        </div>
+    </form>
 
 
     <!--FOOTER-->
